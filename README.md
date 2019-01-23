@@ -31,17 +31,17 @@ If you are using virtualenvwrapper use the following steps:
 2. workon venv
 3. pip install -r requirements.txt
 
-## Training language model:
+## Training language model with  preprocessed data:
 
 1. Create tokens:  
- `python create_toks.py <path_to_processed_wiki_dump>`  
-eg: `python create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
+ `python lm/create_toks.py <path_to_processed_wiki_dump>`  
+eg: `python lm/create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 2. Create a token to id mapping:  
- `python tok2id.py <path_to_processed_wiki_dump>`  
-eg: `python tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
+ `python lm/tok2id.py <path_to_processed_wiki_dump>`  
+eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 3. Train language model:  
-`python pretrain_lm.py <path_to_processed_wiki_dump> 0 --lr 1e-3 --cl 40`  
-`eg: python pretrain_lm.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/ 0 --lr 1e-3 --cl 40`  
+`python lm/pretrain_lm.py <path_to_processed_wiki_dump> 0 --lr 1e-3 --cl 40`  
+`eg: python lm/pretrain_lm.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/ 0 --lr 1e-3 --cl 40`  
 `lr` is the learning rate and `cl` is the no of epochs.
  
 
