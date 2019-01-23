@@ -16,7 +16,7 @@ We trained a malayalam langiage model on the wikipedia article dump from Oct, 20
 - Inference code for text classifier.
 
 ## Downloads
-- [**Pretrained Language Models**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
+- [**Pretrained Language Model**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
 
 - Raw Data for Language Model shared above: [Malayalam Wikipedia](https://dumps.wikimedia.org/mlwiki/latest/mlwiki-latest-pages-articles.xml.bz2) 
 - [Wikipedia Processed Data]() - please use this to train your model
@@ -32,14 +32,14 @@ If you are using virtualenvwrapper use the following steps:
 3. pip install -r requirements.txt
 
 ## Training language model with  preprocessed data:
-
-1. Create tokens:  
+1. Download the preteained language model folder, it contains the preprocessed test and train csv. If you would like to preproccess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
+2. Create tokens:  
  `python lm/create_toks.py <path_to_processed_wiki_dump>`  
 eg: `python lm/create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
-2. Create a token to id mapping:  
+3. Create a token to id mapping:  
  `python lm/tok2id.py <path_to_processed_wiki_dump>`  
 eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
-3. Train language model:  
+4. Train language model:  
 `python lm/pretrain_lm.py <path_to_processed_wiki_dump> 0 --lr 1e-3 --cl 40`  
 `eg: python lm/pretrain_lm.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/ 0 --lr 1e-3 --cl 40`  
 `lr` is the learning rate and `cl` is the no of epochs.
@@ -50,9 +50,9 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 
 
 ### TODO
-- [x] Language modeling based on wikipedia dump
-- [x] Release Language Models: [Malayalam Language Model]()
-- [x] Train Text classifier
+- [x] Malayalam Language modeling based on wikipedia articles.
+- [x] Release Trained Language Models weights.
+- [x] Malayalam Text classifier script.
 - [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) as tokenizer.
 - [ ] Benchmark with [Byte pair encoding as tokenization](https://nlp.h-its.org/bpemb/ml/)
 
