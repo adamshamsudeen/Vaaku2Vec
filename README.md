@@ -3,7 +3,6 @@ State-of-the-Art Language Modeling and Text Classification in Malayalam Language
 ---
 
 
-
 ## Results
 We trained a malayalam langiage model on the wikipedia article dump from Oct, 2018. The wikipedia dump had 55k+ articles. The difficuly in training a malayalam language model is text tokenization since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/). In the current model we are using nltk tokenizer(will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classify a news into 5 categories(India, Kerala, Sports, Business, Entertainment). Our classifier came out to have a whooping 92% accuracy in the classification task.  
 
@@ -24,14 +23,15 @@ We trained a malayalam langiage model on the wikipedia article dump from Oct, 20
 ## Requirements
 
 ### Installing dependencies
-python3.6+ fastai==0.7
+python3.6  fastai==0.7.0
 
 If you are using virtualenvwrapper use the following steps:
-1. mkvirtualenv -p python3.6 venv  
-2. workon venv
-3. pip install -r requirements.txt
+1. `mkvirtualenv -p python3.6 venv`  
+2. `workon venv`
+3. `pip install -r requirements.txt`
 
-## Training language model with  preprocessed data:
+## Usage
+### Training language model with  preprocessed data:
 1. Download the preteained language model folder, it contains the preprocessed test and train csv. If you would like to preproccess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
 2. Create tokens:  
  `python lm/create_toks.py <path_to_processed_wiki_dump>`  
@@ -44,7 +44,17 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 `eg: python lm/pretrain_lm.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/ 0 --lr 1e-3 --cl 40`  
 `lr` is the learning rate and `cl` is the no of epochs.
  
+### Training the classifier:
 
+1. Use train.ipynb to train the text classifier
+
+### Testing the classifier:
+
+1. To test the classifier trained on manorama news, download the the model weights.
+2. Use `prediction.ipynb` and test out your input.
+
+We manually tested the model on news from other leading news paper and the model performed pretty well.
+![result](img/result.png)
 
 
 
@@ -53,11 +63,18 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 - [x] Malayalam Language modeling based on wikipedia articles.
 - [x] Release Trained Language Models weights.
 - [x] Malayalam Text classifier script.
-- [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) as tokenizer.
-- [ ] Benchmark with [Byte pair encoding as tokenization](https://nlp.h-its.org/bpemb/ml/)
+- [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) for tokenization.
+- [ ] Benchmark with [Byte pair encoding for tokenization](https://nlp.h-its.org/bpemb/ml/)
+- [ ] UI to train a and test classifier.
+- [ ] Basic Chatbot using this implementation.
 
 
 
-#### Thanks
+## Thanks
 
-**Special thanks to Sebastian Ruder and Jeremy Howard and other contributors to [fastai](https://github.com/fastai/fastai)**. 
+**Special thanks to [Sebastian Ruder](https://github.com/sebastianruder/) and [Jeremy Howard](https://github.com/jph00) and other contributors to [fastai](https://github.com/fastai/fastai)** and ULTMFiT. 
+
+## Contibutors
+
+1. [Kamal K Raj](https://github.com/kamalkraj)
+2. Adam Shamsudeen
