@@ -16,18 +16,45 @@ We trained a malayalam langiage model on the wikipedia article dump from Oct, 20
 - Inference code for text classifier.
 
 ## Downloads
-- [**Pretrained Language Models**]() 
+- [**Pretrained Language Models**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
 
 - Raw Data for Language Model shared above: [Malayalam Wikipedia](https://dumps.wikimedia.org/mlwiki/latest/mlwiki-latest-pages-articles.xml.bz2) 
 - [Wikipedia Processed Data]() - please use this to train your model
+
+## Requirements
+
+### Installing dependencies
+python3.6+ fastai==0.7
+
+If you are using virtualenvwrapper use the following steps:
+1. mkvirtualenv -p python3.6 venv  
+2. workon venv
+3. pip install -r requirements.txt
+
+## Training language model:
+
+1. Create tokens:  
+ `python create_toks.py <path_to_processed_wiki_dump>`  
+eg: `python create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
+2. Create a token to id mapping:  
+ `python tok2id.py <path_to_processed_wiki_dump>`  
+eg: `python tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
+3. Train language model:  
+`python pretrain_lm.py <path_to_processed_wiki_dump> 0 --lr 1e-3 --cl 40`  
+`eg: python pretrain_lm.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/ 0 --lr 1e-3 --cl 40`  
+`lr` is the learning rate and `cl` is the no of epochs.
+ 
+
+
+
 
 
 ### TODO
 - [x] Language modeling based on wikipedia dump
 - [x] Release Language Models: [Malayalam Language Model]()
-- [x] Create Text classifier
+- [x] Train Text classifier
 - [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) as tokenizer.
-- [ ] Benchmark with [Byte pair encoding for tokenization](https://nlp.h-its.org/bpemb/ml/)
+- [ ] Benchmark with [Byte pair encoding as tokenization](https://nlp.h-its.org/bpemb/ml/)
 
 
 
