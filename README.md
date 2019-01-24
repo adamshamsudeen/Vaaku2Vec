@@ -65,7 +65,7 @@ We manually tested the model on news from other leading news paper and the model
 - [x] Malayalam Text classifier script.
 - [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) for tokenization.
 - [ ] Benchmark with [Byte pair encoding for tokenization](https://nlp.h-its.org/bpemb/ml/)
-- [ ] UI to train a and test classifier.
+- [ ] UI to train and test classifier.
 - [ ] Basic Chatbot using this implementation.
 
 
