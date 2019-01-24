@@ -2,10 +2,10 @@
 State-of-the-Art Language Modeling and Text Classification in Malayalam Language
 ---
 
-<img src="https://raw.githubusercontent.com/adamshamsudeen/Vaaku2Vec/master/img/logo.png" width="500" height="500" />
+<p style="text-align=center"><img src="https://raw.githubusercontent.com/adamshamsudeen/Vaaku2Vec/master/img/logo.png" width="500" height="500" /></p>
 
 ## Results
-We trained a malayalam langiage model on the wikipedia article dump from Oct, 2018. The wikipedia dump had 55k+ articles. The difficuly in training a malayalam language model is text tokenization since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model we are using nltk tokenizer(will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classify a news into 5 categories(India, Kerala, Sports, Business, Entertainment). Our classifier came out to have a whooping 92% accuracy in the classification task.  
+We trained a malayalam language model on the wikipedia article dump from Oct, 2018. The wikipedia dump had 55k+ articles. The difficuly in training a malayalam language model is text tokenization since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model we are using nltk tokenizer(will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classify a news into 5 categories(India, Kerala, Sports, Business, Entertainment). Our classifier came out to have a whooping 92% accuracy in the classification task.  
 
 
 ## Releases
@@ -35,7 +35,7 @@ If you are using virtualenvwrapper use the following steps:
 
 ## Usage
 ### Training language model with  preprocessed data:
-1. Download the preteained language model folder, it contains the preprocessed test and train csv. If you would like to preproccess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
+1. Download the pretrained language model folder, it contains the preprocessed test and train csv. If you would like to preproccess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
 2. Create tokens:  
  `python lm/create_toks.py <path_to_processed_wiki_dump>`  
 eg: `python lm/create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
