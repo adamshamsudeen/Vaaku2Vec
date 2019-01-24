@@ -1,6 +1,8 @@
 import numpy as np
 from fastai.text import *
 import html
+from nltk import word_tokenize
+
 
 class Tokenizer():
     def __init__(self, lang='en'):

@@ -1,7 +1,7 @@
 from fastai.text import *
 import html
 import fire
-import nltk
+from nltk import word_tokenize
 
 BOS = 'xbos'  # beginning-of-sentence tag
 FLD = 'xfld'  # data field tag
