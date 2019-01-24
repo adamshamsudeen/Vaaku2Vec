@@ -3,7 +3,9 @@ State-of-the-Art Language Modeling and Text Classification in Malayalam Language
 ---
 
 
-<p style="text-align=center"><img src="https://raw.githubusercontent.com/adamshamsudeen/Vaaku2Vec/master/img/logo.png" width="500" height="500" /></p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/adamshamsudeen/Vaaku2Vec/master/img/logo.png" width="500" height="500" />
+</p>
 
 
 ## Results
