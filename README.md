@@ -9,26 +9,28 @@ We trained a malayalam langiage model on the wikipedia article dump from Oct, 20
 
 ## Releases
 
-- Wikipedia processed data with train and test split.
-- Code and weights for Malayalam Language model.
+- Proccessed wikipedia dump of articles split into test and train.
+- Script and weights for Malayalam Language model.
 - Malayalam text classifier with pretrained weights.
 - Inference code for text classifier.
 
 ## Downloads
-- [**Pretrained Language Model**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
+- [**Pretrained Malayalam Language Model**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
 
-- Raw Data for Language Model shared above: [Malayalam Wikipedia](https://dumps.wikimedia.org/mlwiki/latest/mlwiki-latest-pages-articles.xml.bz2) 
-- [Wikipedia Processed Data]() - please use this to train your model
+- Raw Datadump of malayalam wikipedia articles : [Malayalam Articles](https://dumps.wikimedia.org/mlwiki/latest/mlwiki-latest-pages-articles.xml.bz2) 
+- [Pretrained Malyalam Text Classifier](https://www.dropbox.com/sh/60j4ps03j5uwz3p/AAAaMehzzsqUmSCiO9Meshc3a?dl=0) - to run the prediction, you only need this directory.
 
 ## Requirements
 
 ### Installing dependencies
-python3.6  fastai==0.7.0
+python3.6>=
 
 If you are using virtualenvwrapper use the following steps:
-1. `mkvirtualenv -p python3.6 venv`  
-2. `workon venv`
-3. `pip install -r requirements.txt`
+1. `git clone https://github.com/adamshamsudeen/Vaaku2Vec.git`
+2. `mkvirtualenv -p python3.6 venv`  
+3. `workon venv`
+4. `cd Vaaku2Vec`
+5. `pip install -r requirements.txt`
 
 ## Usage
 ### Training language model with  preprocessed data:
@@ -46,11 +48,11 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
  
 ### Training the classifier:
 
-1. Use train.ipynb to train the text classifier
+1. Use `train_classifier.ipynb` to train a malayalam text classifier.
 
 ### Testing the classifier:
 
-1. To test the classifier trained on manorama news, download the the model weights.
+1. To test the classifier trained on Manorama news, download the `Pretrained Malyalam Text Classifier ` mentioned in the downloads.
 2. Use `prediction.ipynb` and test out your input.
 
 We manually tested the model on news from other leading news paper and the model performed pretty well.
