@@ -54,6 +54,7 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 ### Training the classifier:
 
 1. Use `train_classifier.ipynb` to train a malayalam text classifier.
+2. **We have not released the news dataset, raise a request if you want to experiment with the same.**
 
 ### Testing the classifier:
 
