@@ -34,12 +34,11 @@ def fixup(x):
     'nbsp;', ' ').replace('#36;', '$').replace('\\n', "\n").replace('quot;', "'").replace(
     '<br />', "\n").replace('\\"', '"').replace('<unk>','u_n').replace(' @.@ ','.').replace(
     ' @-@ ','-').replace('\\', ' \\ ').replace('\u200d','').replace('\xa0',' ').replace(
-    '\u200c','').replace('“',' ').replace('”',' ').replace('"',' ')
+    '\u200c','').replace('“',' ').replace('”',' ').replace('"',' ').replace('\u200b','')
     x = re.sub('[\(\[].*?[\)\]]', '', x)
     x = re.sub('<[^<]+?>', '', x)
     x = re.sub('[A-Za-z]+','ENG ', x)
     x = re.sub(r'\d+.?(\d+)?','NUM ',x).replace("(","").replace(")","")
-    x = x.replace("."," . ")
     return re1.sub(' ', html.unescape(x))
 
 #def fixup(x):
