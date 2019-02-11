@@ -9,7 +9,7 @@ State-of-the-Art Language Modeling and Text Classification in Malayalam Language
 
 
 ## Results
-We trained a malayalam language model on the wikipedia article dump from Oct, 2018. The wikipedia dump had 55k+ articles. The difficuly in training a malayalam language model is text tokenization since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model we are using nltk tokenizer(will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classify a news into 5 categories(India, Kerala, Sports, Business, Entertainment). Our classifier came out to have a whooping 92% accuracy in the classification task.  
+We trained a Malayalam language model on the Wikipedia article dump from Oct, 2018. The Wikipedia dump had 55k+ articles. The difficuly in training a Malayalam language model is *text tokenization*, since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model, we are using `nltk tokenizer` (will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classifies a news into 5 categories (India, Kerala, Sports, Business, Entertainment). Our classifier came out with a whooping 92% accuracy in the classification task.  
 
 
 ## Releases
