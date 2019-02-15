@@ -22,7 +22,7 @@ We trained a Malayalam language model on the Wikipedia article dump from Oct, 20
 ## Downloads
 - [**Pretrained Malayalam Language Model**](https://www.dropbox.com/sh/a9wmsg5cjpzmyg1/AABmyHP-4bLmqrwJSB5-KeU1a?dl=0) 
 
-- [**Pretrained Malayalam Text Classifier**](https://www.dropbox.com/sh/60j4ps03j5uwz3p/AAAaMehzzsqUmSCiO9Meshc3a?dl=0) - to run only the prediction, use this.  
+- [**Pretrained Malayalam News Classifier**](https://www.dropbox.com/sh/60j4ps03j5uwz3p/AAAaMehzzsqUmSCiO9Meshc3a?dl=0) - to run only the prediction, use this.  
 - Raw Datadump of malayalam wikipedia articles : [Malayalam Articles](https://dumps.wikimedia.org/mlwiki/latest/mlwiki-latest-pages-articles.xml.bz2) 
 
 ## Requirements
