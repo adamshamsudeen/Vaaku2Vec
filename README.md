@@ -64,7 +64,13 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 We manually tested the model on news from other leading news paper and the model performed pretty well.
 ![result](img/result.png)
 
+## Word2Vec:
 
+1. We also trained a word2vec model using gensim with the Wikipedia dump.
+2. You can also use word2vec model to train a text classifier. [News Classifier](https://github.com/kamalkraj/Malayalam-News-Classifier)
+3. You can see the word2vec demo in the below link.
+
+### [Demo](http://meain.io/w2vui/)
 
 
 ### TODO
