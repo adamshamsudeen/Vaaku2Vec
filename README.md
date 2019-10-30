@@ -9,7 +9,7 @@ State-of-the-Art Language Modeling and Text Classification in Malayalam Language
 
 
 ## Results
-We trained a Malayalam language model on the Wikipedia article dump from Oct, 2018. The Wikipedia dump had 55k+ articles. The difficuly in training a Malayalam language model is *text tokenization*, since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model, we are using `nltk tokenizer` (will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classifies a news into 5 categories (India, Kerala, Sports, Business, Entertainment). Our classifier came out with a whooping 92% accuracy in the classification task.  
+We trained a Malayalam language model on the Wikipedia article dump from Oct, 2018. The Wikipedia dump had 55k+ articles. The difficulty in training a Malayalam language model is *text tokenization*, since [Malayalam is a highly inflectional and agglutinative language.](https://thottingal.in/blog/2017/11/26/towards-a-malayalam-morphology-analyser/) In the current model, we are using `nltk tokenizer` (will try better alternative in the future) and the vocab size is 30k. The language model was used to train a classifier which classifies a news into 5 categories (India, Kerala, Sports, Business, Entertainment). Our classifier came out with a whooping 92% accuracy in the classification task.  
 
 
 ## Releases
@@ -58,7 +58,7 @@ eg: `python lm/tok2id.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 
 ### Testing the classifier:
 
-1. To test the classifier trained on Manorama news, download the `Pretrained Malyalam Text Classifier ` mentioned in the downloads.
+1. To test the classifier trained on Manorama news, download the `Pretrained Malayalam Text Classifier ` mentioned in the downloads.
 2. Use `prediction.ipynb` and test out your input.
 
 We manually tested the model on news from other leading news paper and the model performed pretty well.
