@@ -39,9 +39,10 @@ If you are using virtualenvwrapper use the following steps:
 
 ## Usage
 ### Training language model with  preprocessed data:
-1. Download the pretrained language model folder, it contains the preprocessed test and train csv. If you would like to preproccess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
+1. Download the pretrained language model folder, it contains the preprocessed test and train csv. If you would like to preprocess and retrain the LM using the latest dump article dump using the scripts provided [here](https://github.com/fastai/fastai/tree/master/courses/dl2/imdb_scripts).
 2. Create tokens:  
- `python lm/create_toks.py <path_to_processed_wiki_dump>`  
+ `python lm/create_toks.py <path_to_
+ essed_wiki_dump>`  
 eg: `python lm/create_toks.py /home/adamshamsudeen/mal/Vaaku2Vec/wiki/ml/`
 3. Create a token to id mapping:  
  `python lm/tok2id.py <path_to_processed_wiki_dump>`  
@@ -74,9 +75,9 @@ We manually tested the model on news from other leading news paper and the model
 
 
 ### TODO
-- [x] Malayalam Language modeling based on wikipedia articles.
-- [x] Release Trained Language Models weights.
-- [x] Malayalam Text classifier script.
+- [x] Malayalam language modeling based on wikipedia articles.
+- [x] Release trained language models weights.
+- [x] Malayalam text classifier script.
 - [ ] Benchmark with [mlmorph](https://gitlab.com/smc/mlmorph) for tokenization.
 - [ ] Benchmark with [Byte pair encoding for tokenization](https://nlp.h-its.org/bpemb/ml/)
 - [ ] UI to train and test classifier.
