@@ -34,7 +34,7 @@ nbconvert==5.4.1
 nbformat==4.4.0
 notebook==5.7.8
 numexpr==2.6.9
-numpy==1.16.2
+numpy==1.22.0
 nvidia-ml-py3==7.352.0
 packaging==19.0
 pandas==0.24.2
